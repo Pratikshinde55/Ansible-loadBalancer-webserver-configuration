@@ -1,0 +1,18 @@
+# Playbook for Load balancer (HAproxy) and use local registration template named as pratik.cfg.j2 ,
+
+- hosts: lb
+  tasks:
+    - name: "Installing HAproxy load balancer"
+      package:
+        name: "haproxy"
+        state: present
+
+    - name: "Registration of webserver to load balancer"
+      template:
+        src: "pratik.cfg.j2"
+        dest: "/etc/haproxy/haproxy.cfg"
+
+    - name: "start load balancer service"
+      service:
+        name: "haproxy"
+        state: restarted
