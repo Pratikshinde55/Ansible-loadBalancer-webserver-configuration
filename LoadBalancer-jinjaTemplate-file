@@ -1,0 +1,13 @@
+#This jinja file for load balancer registration of webserver .
+
+frontend lb
+    bind *:8080
+    timeout client 10s
+    default_backend psweb
+
+backend psweb
+    balance roundrobin
+    timeout connect 10s
+    timeout server 10s
+    server app1 54.159.221.239:80 
+    server app2 44.202.88.227:80
