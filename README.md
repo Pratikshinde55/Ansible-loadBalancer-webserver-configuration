@@ -37,7 +37,7 @@ Create Inventory , In inventory i made two groups "Web" group for webserver node
 
 ![Screenshot 2024-03-08 192439](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/c7222013-3942-48d7-abf2-80024384fa12)
 
-we can check ansible list of hosts useing following command:
+we can check ansible list of hosts using following command:
 
 ![Screenshot 2024-03-08 192031](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/c4e3522a-b1ff-432d-bf88-e30377fff6a0)
 
