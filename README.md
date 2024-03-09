@@ -70,6 +70,12 @@ Now for Load Balancer need registration of backend nodes for this , i created ji
 
 ![Screenshot 2024-03-08 191830](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/ea5a34da-3cc3-470d-95fb-8cc861e69ba1)
 
+Note:
+
+here we use Round Robin Algorithm that work as client will connect to web server through Load balancer , 1st connect to web 1 then web 2 and next web 3 then again go to 1. here also bind the port no. as 8080 .
+
+
+
 
 
 
