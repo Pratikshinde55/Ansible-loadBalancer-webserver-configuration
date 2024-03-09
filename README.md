@@ -31,6 +31,8 @@ Step-2:
 
 Create Inventory , In inventory i made two groups "Web" group for webserver nodes & "lb" group for LoadBalancer node:
 
+      #vim /etc/ansible/hosts
+
 ![Screenshot 2024-03-08 192439](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/c7222013-3942-48d7-abf2-80024384fa12)
 
 
