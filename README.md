@@ -57,6 +57,8 @@ Step-4:
 
 Run Wenserver.yml playbook - this playbook do configuration in web group where Two nodes .
 
+     #ansible-playbook webserver.yml
+
 ![Screenshot 2024-03-08 192223](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/40949559-4c32-4cd7-abc9-a4f8e64168d7)
 
 
