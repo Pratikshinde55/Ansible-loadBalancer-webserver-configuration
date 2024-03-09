@@ -21,7 +21,7 @@ In ansible master node i created 2 playbooks one for Loadbalancer and one for we
 
 ![Screenshot 2024-03-08 191538](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/8762d476-644d-497e-b0e4-5b2c24c2b34f)
 
-Step-1:
+⚡Step-1:
 
 In  master node 1st i created webpage (index.php): This webpage index.php is deploy to webserver which can client access from browser:
 
@@ -29,7 +29,7 @@ In  master node 1st i created webpage (index.php): This webpage index.php is dep
 
 ![Screenshot 2024-03-08 191718](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/7e46d046-7a9b-4ad0-8a46-f329681c06b5)
 
-Step-2:
+⚡Step-2:
 
 Create Inventory , In inventory i made two groups "Web" group for webserver nodes & "lb" group for LoadBalancer node:
 
@@ -41,7 +41,7 @@ we can check ansible list of hosts using following command:
 
 ![Screenshot 2024-03-08 192031](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/c4e3522a-b1ff-432d-bf88-e30377fff6a0)
 
-Step-3:
+⚡Step-3:
 
 Now Create Webserver (Backend) playbook and here hosts for webserver playbook is "web" group, in web group two instances are kept:
 
@@ -53,7 +53,7 @@ In this playbook 1st Task install Httpd package , 2nd Task is Install php packag
 
 ![Screenshot 2024-03-08 191743](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/307945c7-0c30-4c0b-bcee-e35ed336d058)
 
-Step-4:
+⚡Step-4:
 
 Run Webserver.yml playbook - this playbook do configuration in web group where Two nodes .
 
@@ -62,7 +62,7 @@ Run Webserver.yml playbook - this playbook do configuration in web group where T
 ![Screenshot 2024-03-08 192223](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/40949559-4c32-4cd7-abc9-a4f8e64168d7)
 
 
-Step-5:
+⚡Step-5:
 
 Now for Load Balancer need registration of backend nodes for this , i created jinja file "pratik.cfg.j2" which pass registration information to LoadBalancer playbook "lb":
 
@@ -74,7 +74,7 @@ Note:
 
 here we use Round Robin Algorithm that work as client will connect to web server through Load balancer , 1st connect to web 1 then web 2 and next web 3 then again go to 1. here also bind the port no. as 8080 .
 
-Step-6:
+⚡Step-6:
 
 Create Load balancer Playbook "lb.yml", add lb group where only one instance for lb IP:-18.206.228.124
 
@@ -92,13 +92,24 @@ Note:
 
 HAproxy is one of the product of load balancer, HAproxy is a high-performance, open source load balancer & reverse proxy for HTTP and TCP .
 
-Step-7:
+⚡Step-7:
 
 Run Load balancer "lb.yml" playbook , This do load balncer configuration on lb group:
 
     #ansible-playbook lb.yml
 
 ![Screenshot 2024-03-08 192329](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/006b2f23-342c-49b9-a1b2-adc0f95d6685)
+
+
+💥Configuration of Load balancer & webserver done successfully:\
+
+  Check on Google or Browser Publich IP load balancer : port no. that bind:
+
+  http://18.206.228.124:8080
+
+![Screenshot 2024-03-08 193442](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/823b6f21-2453-4580-9369-ef92c9e1ed26)
+  
+
 
 
 
