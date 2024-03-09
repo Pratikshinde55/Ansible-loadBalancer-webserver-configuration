@@ -21,7 +21,10 @@ In ansible master node i created 2 playbooks one for Loadbalancer and one for we
 
 ![Screenshot 2024-03-08 191538](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/8762d476-644d-497e-b0e4-5b2c24c2b34f)
 
-In  master node 1st i created webpage (index.php)
+In  master node 1st i created webpage (index.php):
+
+![Screenshot 2024-03-08 191718](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/7e46d046-7a9b-4ad0-8a46-f329681c06b5)
+
 
 
 
