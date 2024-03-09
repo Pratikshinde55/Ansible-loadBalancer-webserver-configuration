@@ -76,7 +76,7 @@ here we use Round Robin Algorithm that work as client will connect to web server
 
 Step-6:
 
-Create Load balancer Playbook "lb.yml", add lb gruop where only one instance for lb IP:-18.206.228.124
+Create Load balancer Playbook "lb.yml", add lb group where only one instance for lb IP:-18.206.228.124
 
 In this playbook 1st task for install haproxy package It is loadBalancer that i used,
 
@@ -87,6 +87,10 @@ In this playbook 1st task for install haproxy package It is loadBalancer that i 
       #vim lb.yml
 
 ![Screenshot 2024-03-08 191851](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/bd60bfcf-8a66-49ae-aa38-3478aa5398a4)
+
+Note:
+
+HAproxy is one of the product of load balancer, HAproxy is a high-performance, open source load balancer & reverse proxy for HTTP and TCP .
 
 
 
