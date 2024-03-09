@@ -25,6 +25,8 @@ Step-1:
 
 In  master node 1st i created webpage (index.php): This webpage index.php is deploy to webserver which can client access from browser:
 
+      #cat > index.php
+
 ![Screenshot 2024-03-08 191718](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/7e46d046-7a9b-4ad0-8a46-f329681c06b5)
 
 Step-2:
