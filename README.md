@@ -101,7 +101,7 @@ Run Load balancer "lb.yml" playbook , This do load balncer configuration on lb g
 ![Screenshot 2024-03-08 192329](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/006b2f23-342c-49b9-a1b2-adc0f95d6685)
 
 
-💥Configuration of Load balancer & webserver done successfully:\
+💥Configuration of Load balancer & webserver done successfully:
 
   Check on Google or Browser Publich IP load balancer : port no. that bind:
 
