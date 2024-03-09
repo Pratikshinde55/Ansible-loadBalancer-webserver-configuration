@@ -80,7 +80,7 @@ Create Load balancer Playbook "lb.yml", add lb group where only one instance for
 
 In this playbook 1st task for install haproxy package It is loadBalancer that i used,
 
-2nd task for rigistration of backend webservre to Load balncer for this pratik.cfg.j2 jinja template used , In haproxy Load balancer configuration file for load balancer is kept in "/etc/haproxy/haproxy.cfg
+2nd task for rigistration of backend webservre to Load balncer for this pratik.cfg.j2 jinja template used , In haproxy Load balancer configuration file for load balancer is kept in "/etc/haproxy/haproxy.cfg"
 
 3rd task for Start haproxy service
 
@@ -91,6 +91,8 @@ In this playbook 1st task for install haproxy package It is loadBalancer that i 
 Note:
 
 HAproxy is one of the product of load balancer, HAproxy is a high-performance, open source load balancer & reverse proxy for HTTP and TCP .
+
+
 
 
 
