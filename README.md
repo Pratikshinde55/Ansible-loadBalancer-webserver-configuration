@@ -92,6 +92,15 @@ Note:
 
 HAproxy is one of the product of load balancer, HAproxy is a high-performance, open source load balancer & reverse proxy for HTTP and TCP .
 
+Step-7:
+
+Run Load balancer "lb.yml" playbook , This do load balncer configuration on lb group:
+
+    #ansible-playbook lb.yml
+
+![Screenshot 2024-03-08 192329](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/006b2f23-342c-49b9-a1b2-adc0f95d6685)
+
+
 
 
 
