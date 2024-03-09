@@ -108,6 +108,13 @@ Run Load balancer "lb.yml" playbook , This do load balncer configuration on lb g
   http://18.206.228.124:8080
 
 ![Screenshot 2024-03-08 193442](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/823b6f21-2453-4580-9369-ef92c9e1ed26)
+
+Note:
+
+Load balancer node Inbound rules ->> All trafic , Anywhere ( remove Firewall )
+
+![Screenshot 2024-03-08 185340](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/16ee3cf8-f783-4ea8-8dd4-f019dce74bb8)
+
   
 
 
