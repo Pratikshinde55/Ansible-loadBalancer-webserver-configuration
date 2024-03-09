@@ -78,9 +78,17 @@ Step-6:
 
 Create Load balancer Playbook "lb.yml", add lb gruop where only one instance for lb IP:-18.206.228.124
 
+In this playbook 1st task for install haproxy package It is loadBalancer that i used,
+
+2nd task for rigistration of backend webservre to Load balncer for this pratik.cfg.j2 jinja template used , In haproxy Load balancer configuration file for load balancer is kept in "/etc/haproxy/haproxy.cfg
+
+3rd task for Start haproxy service
+
       #vim lb.yml
 
 ![Screenshot 2024-03-08 191851](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/bd60bfcf-8a66-49ae-aa38-3478aa5398a4)
+
+
 
 
    
