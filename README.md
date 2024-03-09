@@ -55,7 +55,7 @@ In this playbook 1st Task install Httpd package , 2nd Task is Install php packag
 
 Step-4:
 
-Run Wenserver.yml playbook - this playbook do configuration in web group where Two nodes .
+Run Webserver.yml playbook - this playbook do configuration in web group where Two nodes .
 
      #ansible-playbook webserver.yml
 
