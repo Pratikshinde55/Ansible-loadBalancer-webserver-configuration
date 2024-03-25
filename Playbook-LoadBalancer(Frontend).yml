@@ -1,4 +1,4 @@
-# Playbook for Load balancer (HAproxy) and use local registration template named as pratik.cfg.j2 ,
+###...Playbook for Load balancer (HAproxy) and use local registration template named as 'pratik.cfg.j2'...###
 
 - hosts: lb
   tasks:
