@@ -75,8 +75,7 @@ In this playbook:-
 balancer is kept in "/etc/haproxy/haproxy.cfg"
 3. task for Start haproxy service
 
-
-     vim lb.yml
+        vim lb.yml
 
 ![Screenshot 2024-03-08 191851](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/bd60bfcf-8a66-49ae-aa38-3478aa5398a4)
 
