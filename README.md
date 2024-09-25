@@ -46,44 +46,42 @@ index.php to destination **"/var/www/html/"** & 4th Task for start httpd service
 
 ![Screenshot 2024-03-08 191743](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/307945c7-0c30-4c0b-bcee-e35ed336d058)
 
-### Step-4:
-
-Run Webserver.yml playbook - this playbook do configuration in web group where Two nodes .
-
-     #ansible-playbook webserver.yml
+### Step-4: [Run Webserver.yml playbook - this playbook do Configuration in Web group where Two nodes]
+     
+     ansible-playbook webserver.yml
 
 ![Screenshot 2024-03-08 192223](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/40949559-4c32-4cd7-abc9-a4f8e64168d7)
 
+### Step-5: [Load Balancer need Registration of backend nodes]
 
-⚡Step-5:
-
-Now for Load Balancer need registration of backend nodes for this , i created jinja file "pratik.cfg.j2" which pass registration information to LoadBalancer playbook "lb":
-
-     #vim pratik.cfg.j2
+Now for this, create jinja file "pratik.cfg.j2" which pass registration information to LoadBalancer playbook "lb":
+      
+      vim pratik.cfg.j2
 
 ![Screenshot 2024-03-08 191830](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/ea5a34da-3cc3-470d-95fb-8cc861e69ba1)
 
-Note:
+- Note:
 
-here we use Round Robin Algorithm that work as client will connect to web server through Load balancer , 1st connect to web 1 then web 2 and next web 3 then again go to 1. here also bind the port no. as 8080 .
+here we use **Round Robin** Algorithm that work as Client will connect to Web Server through Load balancer, 1st connect to Web 1 then Web 2 and next Web 3 then 
+again go to 1. here also bind the port number as **8080** .
 
-⚡Step-6:
+### Step-6: [Create Load balancer Playbook]
 
 Create Load balancer Playbook "lb.yml", add lb group where only one instance for lb IP:-18.206.228.124
 
-In this playbook 1st task for install haproxy package It is loadBalancer that i used,
+In this playbook:-
+1. task for install haproxy package It is loadBalancer that i used,
+2. task for rigistration of backend webservre to Load balncer for this pratik.cfg.j2 jinja template used , In haproxy Load balancer configuration file for load 
+balancer is kept in "/etc/haproxy/haproxy.cfg"
+3. task for Start haproxy service
 
-2nd task for rigistration of backend webservre to Load balncer for this pratik.cfg.j2 jinja template used , In haproxy Load balancer configuration file for load balancer is kept in "/etc/haproxy/haproxy.cfg"
-
-3rd task for Start haproxy service
-
-      #vim lb.yml
+     vim lb.yml
 
 ![Screenshot 2024-03-08 191851](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/bd60bfcf-8a66-49ae-aa38-3478aa5398a4)
 
-Note:
+- Note:
 
-HAproxy is one of the product of load balancer, HAproxy is a high-performance, open source load balancer & reverse proxy for HTTP and TCP .
+**HAproxy is one of the product of load balancer, HAproxy is a high-performance, open source load balancer & reverse proxy for HTTP and TCP.**
 
 ⚡Step-7:
 
