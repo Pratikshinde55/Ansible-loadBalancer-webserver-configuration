@@ -65,8 +65,8 @@ Now for this, create jinja file "pratik.cfg.j2" which pass registration informat
 
 - Note:
 
-here we use **Round Robin** Algorithm that work as Client will connect to Web Server through Load balancer, 1st connect to Web 1 then Web 2 and next Web 3 then 
-again go to 1. here also bind the port number as **8080** .
+*here we use **Round Robin** Algorithm that work as Client will connect to Web Server through Load balancer, 1st connect to Web 1 then Web 2 and next Web 3 then 
+again go to 1. here also bind the port number as **8080**.*
 
 ### Step-6: [Create Load balancer Playbook]
 
