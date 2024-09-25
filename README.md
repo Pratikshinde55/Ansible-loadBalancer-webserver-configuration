@@ -45,7 +45,7 @@ In this ansible-playbook:
 3. Taskis Deploy Webpage index.php to destination **"/var/www/html/"**,
 4. Task for start httpd service.
      
-     vim webserver.yml
+       vim webserver.yml
 
 ![Screenshot 2024-03-08 191743](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/307945c7-0c30-4c0b-bcee-e35ed336d058)
 
