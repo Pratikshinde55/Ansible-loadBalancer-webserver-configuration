@@ -2,6 +2,8 @@
 
 ![Screenshot 2024-03-18 154506](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/42e18334-9382-403eac9365ceda64796e)
 
+![image](https://github.com/user-attachments/assets/f27fa663-6563-470f-bd12-b331e1f2d12a)
+
 Manual way or using Ad hoc command Configuration of Load balancer & webserver using Ansible Automation in given link:
 [Load-Balancer-manual](https://github.com/Pratikshinde55/Load-Balancer.git) 
 
