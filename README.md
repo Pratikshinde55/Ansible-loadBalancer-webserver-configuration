@@ -39,8 +39,11 @@ We can check ansible list of hosts using following Command:
 
 ### Step-3: [Now Create Webserver(Backend) playbook and here hosts for webserver playbook is "web" group, in web group two instances are kept]
 
-In this ansible-playbook 1st Task install Httpd package, 2nd Task is Install php package which is because my Webpage in the form of '.php', 3rd is Deploy Webpage 
-index.php to destination **"/var/www/html/"** & 4th Task for start httpd service:
+In this ansible-playbook:
+1. Task install Httpd package,
+2. Task is Install php package which is because my Webpage in the form of '.php',
+3. Taskis Deploy Webpage index.php to destination **"/var/www/html/"**,
+4. Task for start httpd service.
      
      vim webserver.yml
 
