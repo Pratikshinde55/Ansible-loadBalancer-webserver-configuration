@@ -83,47 +83,25 @@ balancer is kept in "/etc/haproxy/haproxy.cfg"
 
 **HAproxy is one of the product of load balancer, HAproxy is a high-performance, open source load balancer & reverse proxy for HTTP and TCP.**
 
-⚡Step-7:
+### Step-7: [Run Load balancer]
 
 Run Load balancer "lb.yml" playbook , This do load balncer configuration on lb group:
 
-    #ansible-playbook lb.yml
+    ansible-playbook lb.yml
 
 ![Screenshot 2024-03-08 192329](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/006b2f23-342c-49b9-a1b2-adc0f95d6685)
 
 
-💥Configuration of Load balancer & webserver done successfully:
+## Configuration of Load balancer & WebServer done successfully:
 
-  Check on Google or Browser Publich IP load balancer : port no. that bind:
+Check on Google or Browser Publich IP load balancer : port no. that bind:
 
-  http://18.206.228.124:8080
+Example:- http://18.206.228.124:8080
 
 ![Screenshot 2024-03-08 193442](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/823b6f21-2453-4580-9369-ef92c9e1ed26)
 
-Note:
+- Note:
 
 Load balancer node Inbound rules ->> All trafic , Anywhere ( remove Firewall )
 
 ![Screenshot 2024-03-08 185340](https://github.com/Pratikshinde55/Ansible-loadBalancer-webserver-configuration/assets/145910708/16ee3cf8-f783-4ea8-8dd4-f019dce74bb8)
-
-  
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
