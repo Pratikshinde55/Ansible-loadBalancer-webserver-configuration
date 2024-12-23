@@ -42,7 +42,7 @@ We can check ansible list of hosts using following Command:
 In this ansible-playbook:
 1. Task install Httpd package,
 2. Task is Install php package which is because my Webpage in the form of '.php',
-3. Taskis Deploy Webpage index.php to destination **"/var/www/html/"**,
+3. Task is Deploy Webpage index.php to destination **"/var/www/html/"**,
 4. Task for start httpd service.
      
        vim webserver.yml
