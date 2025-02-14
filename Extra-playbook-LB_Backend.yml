@@ -1,0 +1,67 @@
+## Following are two playbook 1. BackEnd & 2. FrontEnd (very fantasic playbook) 
+# Use template for Loadbalancer Backend register as same "pratik.cfg.j2" template provided 
+
+
+#### (1)This Playbook for Backend SetUp -> handlers are added ,
+## This web.yml backend playbook 1st Change Default DocumentRoot /var/www/pratik then copy index.html  
+- hosts: bd
+  vars:
+    - myapp: "httpd"
+    - mypath: "/var/www/pratik"
+    - mypage: "index.html"
+  tasks:
+    - name: "Installing {{ myapp }} in backend Target host"
+      package:
+        name: "{{ myapp }}"
+        state: present
+
+    - name: "Creating Folder at -- {{ mypath }} Target Host"
+      file:
+        state: directory
+        path: "{{ mypath }}"
+
+    - name: "Changing Root path as-> {{ mypath }}"
+      copy:
+        dest: /etc/httpd/conf.d/my.conf
+        content: |
+          DocumentRoot {{ mypath }}
+      notify: "Restarting {{ myapp }} service"
+
+    - name: "Copying {{ mypage }} at {{ mypath }} on Target Host"
+      copy:
+        src: "{{ mypage }}"
+        dest: "{{ mypath }}"
+    
+  handlers:          
+    - name: "Restarting {{ myapp }} service"
+      service:
+        name: "{{ myapp }}"
+        state: restarted
+        enabled: true
+
+
+#### (2)This Playbook For FrontEnd eith added Handlers for service This make Playbook very Fantastic:
+
+- hosts: lb
+  vars:
+    - mylb: "haproxy"
+    - mytemplate: "pratik.j2"
+  tasks:
+    - name: "Insatting LoadBalancer {{ mylb }} at Target"
+      package: 
+        name: "{{ mylb }}"
+        state: present
+
+    - name: "Register BAckEnd using -> {{ mytemplate }}"
+      template:
+        src: "{{ mytemplate }}"
+        dest: /etc/haproxy/haproxy.cfg
+      notify: "Restarting {{ mylb }} service"
+
+  handlers:      
+    - name: "Restarting {{ mylb }} service"
+      service:
+        name: "{{ mylb }}"
+        state: restarted
+        enabled: true
+
